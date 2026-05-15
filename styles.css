@@ -163,7 +163,7 @@ h1 {
 }
 
 h2 {
-    color: var(--green);
+    color: var(--blue);
     font-size: 3rem;
 }
 
@@ -234,4 +234,114 @@ small {
     color: var(--black);
     text-align: center;
     padding: 1rem;
+}
+
+
+/* Animation styling */
+#meal-plan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.day-card {
+    background: var(--green);
+    border: 2px solid var(--black);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 4px 4px 0px var(--black);
+}
+
+.spinning {
+    color: var(--black);
+    font-style: italic;
+    opacity: 0.6;
+    animation: flicker 0.1s infinite;
+}
+
+.final-selection {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 1.4rem;
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes flicker {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
+
+.hidden { display: none; }
+
+/* The Lever */
+#lever {
+    width: 40px;
+    height: 100px;
+    background: #444;
+    position: relative;
+    cursor: pointer;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.handle {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, red, darkred);
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: -5px;
+    transition: transform 0.3s;
+}
+
+#lever.pulled .handle {
+    transform: translateY(120px);
+}
+
+/* Slot Layout */
+.machine-container {
+    display: flex;
+    justify-content: space-around;
+    background: #222;
+    padding: 20px;
+    border: 10px solid var(--yellow);
+    border-radius: 15px;
+}
+
+.slot {
+    background: white;
+    width: 30%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px inset #888;
+    overflow: hidden;
+}
+
+.slot .text {
+    font-family: 'Flavors', cursive;
+    font-size: 1.2rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.landed {
+    animation: bounce 0.4s ease;
+    color: var(--blue) !important;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }

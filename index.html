@@ -18,7 +18,7 @@
         <main>
             <section id="mealInput">
                 <h2>Meals</h2>
-                <p>Enter the foods you have for each category, and let the roulette do her thang!</p>
+                <p>Enter your foods (comma separated), pull the lever, and let the roulette do her thang!</p>
 
                 <form>
                     <label for="starch">Starch:</label>
@@ -39,19 +39,29 @@
                     <label for="fats">Fats:</label>
                     <input type="text" id="fats" name="fats" placeholder="olive oil, butter, avocado, etc.">
 
-                    <button type="submit">Generate Meal Plan</button>
+                    <div class="slot-machine-controls"></div>
+                        <div id="lever" onclick="pullLever()">
+                            <div class="handle"></div>
+                            <div class="arm"></div>
+                        </div>
+                        <p>Pull to Generate!</p>
+                    </div>
                 </form>
             </section>
 
-            <section id="output">
+            <section id="output" class="hidden">
                 <h2>Your Meal Plan</h2>
 
                 <!-- Generated meal plan will be displayed here -->
-                <div id="meal-plan"></div>
-
-                <button onclick="exportToCSV()">Download Spreadsheet</button>
-                <button onclick="printMealPlan()">Print Meal Plan</button>
-                <button onclick="returnHome()">Return Home</button>
+                <div class="machine-container">
+                    <div class="slot" id="slot-breakfast"><h3>Breakfast</h3><div class="text">?</div></div>
+                    <div class="slot" id="slot-lunch"><h3>Lunch</h3><div class="text">?</div></div>
+                    <div class="slot" id="slot-dinner"><h3>Dinner</h3><div class="text">?</div></div>
+                </div>
+                <div class="actions">
+                    <button onclick="exportToCSV()">Download Spreadsheet</button>
+                    <button onclick="returnHome()">New Plan</button>
+                </div>
             </section>
         </main>
 
