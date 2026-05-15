@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A roulette-style meal planner that takes user input and outputs a menu for a seven day period.">
+        <meta name="author" content="Prima Fombo">
+        <title>PrimaPreps | Roulette Meal Planner</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>PrimaPreps:</h1>
+            <p>˚★⋆｡˚⋆｡˚ Roulette Meal Planner ˚★⋆｡˚⋆｡˚</p>
+        </header>
+
+        <main>
+            <section id="mealInput">
+                <h2>Meals</h2>
+                <p>Enter the foods you have for each category, and let the roulette do her thang!</p>
+
+                <form>
+                    <label for="starch">Starch:</label>
+                    <input type="text" id="starch" name="starch" placeholder="rice, pasta, potatoes, etc.">
+
+                    <label for="veg">Vegetables:</label>
+                    <input type="text" id="veg" name="veg" placeholder="spinach, broccoli, carrots, etc.">
+
+                    <label for="protein">Protein:</label>
+                    <input type="text" id="protein" name="protein" placeholder="chicken, tofu, beans, etc.">
+
+                    <label for="fruit">Fruit:</label>
+                    <input type="text" id="fruit" name="fruit" placeholder="apples, berries, citruses, etc.">
+
+                    <label for="dairy">Dairy:</label>
+                    <input type="text" id="dairy" name="dairy" placeholder="milk, cheese, ice cream, etc.">
+
+                    <label for="fats">Fats:</label>
+                    <input type="text" id="fats" name="fats" placeholder="olive oil, butter, avocado, etc.">
+
+                    <button type="submit">Generate Meal Plan</button>
+                </form>
+            </section>
+
+            <section id="output">
+                <h2>Your Meal Plan</h2>
+
+                <!-- Generated meal plan will be displayed here -->
+                <div id="meal-plan"></div>
+
+                <button onclick="exportToCSV()">Download Spreadsheet</button>
+                <button onclick="printMealPlan()">Print Meal Plan</button>
+                <button onclick="returnHome()">Return Home</button>
+            </section>
+        </main>
+
+        <footer>
+        <p>
+            <small>
+                &copy; Prima Fombo 2026
+            </small>
+        </p>
+        </footer>
+
+    <script src="script.js"></script>
+    </body>
+</html>

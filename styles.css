@@ -1,0 +1,237 @@
+/* CSS BY PRIMA FOMBO */
+
+/* IMPORTED FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Flavors&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+    --yellow: #fffd74;
+    --black: #353839;
+    --white: #FFFDD0;
+    --blue: #A7C7E7;
+    --pink: #FFD1DC;
+    --green: #C1E1C1;
+    --font: 'Noto Sans', sans-serif;
+}
+
+/* GLOBAL STYLES (SMALL) */
+html,
+body {
+  min-width: 400px;
+  background-color: var(--white);
+}
+
+h1, h2 {
+    font-family: 'Flavors', cursive;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    color: var(--pink);
+    font-size: 4rem;
+    text-shadow: 1px 1px 2px var(--black);
+}
+
+h2 {
+    color: var(--green);
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.25rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+p, small {
+    font-family: var(--font);
+    color: var(--black);
+    text-align: center;
+}
+
+header {
+    background-color: var(--blue);
+    padding: 1rem;
+}
+
+header p {
+    color: var(--pink);
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px var(--black);
+}
+
+#mealInput form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#mealInput form label {
+  color: var(--black);
+  font-weight: bold;
+  font-family: var(--font);
+  margin-bottom: 0.5rem;
+}
+
+#mealInput form input,
+#mealInput form textarea {
+  padding: 1rem;
+  border: 1px solid var(--black);
+  border-radius: 8px;
+  font-family: var(--font);
+  margin-bottom: 1rem;
+}
+
+#mealInput form button {
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+#output {
+  visibility: hidden;
+  height: 1px;
+}
+
+small {
+    font-size: 0.75rem;
+    color: var(--black);
+    text-align: center;
+    padding: 1rem;
+}
