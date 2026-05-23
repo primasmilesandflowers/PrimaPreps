@@ -138,7 +138,7 @@ table {
     --black: #353839;
     --white: #FFFDD0;
     --blue: #A7C7E7;
-    --pink: #FFD1DC;
+    --pink: #ffd9e2;
     --green: #C1E1C1;
     --font: 'Noto Sans', sans-serif;
 }
@@ -233,6 +233,11 @@ small {
     font-size: 0.75rem;
     color: var(--black);
     text-align: center;
+    padding: 1rem;
+}
+
+footer {
+    background-color: var(--green);
     padding: 1rem;
 }
 
